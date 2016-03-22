@@ -22,8 +22,8 @@
         <div class="form-group field" > 
             <div class="center"><%= f.label :Role %><br /></div>
             <div class="center"><%= f.select :role, 
-            options_for_select(["select one", "admin", "user"],
-            :disabled => ["select one"]) %></div>
+            options_for_select(["select one", "user", "admin"],
+            :disabled => ["select one"."admin"]) %></div>
         </div>
         <br/>
         <div>
