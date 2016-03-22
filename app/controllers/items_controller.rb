@@ -37,7 +37,7 @@ class ItemsController < ApplicationController
 
 	def destroy
 		@item.destroy
-		redirect_to '/show'
+		redirect_to '/index'
 	end
 	
 	def item_params  
