@@ -20,7 +20,7 @@ Product::Application.configure do
   # config.action_dispatch.rack_cache = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
-  config.serve_static_assets = true
+  config.serve_static_items = true
   config.assets.precompile += %w( .svg .eot .woff .ttf .png .jpg .gif)
   config.assets.compile = true
   # Compress JavaScripts and CSS.
