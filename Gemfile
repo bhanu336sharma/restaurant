@@ -17,6 +17,7 @@ gem 'devise'
 gem 'pry'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'rails_12factor', group: :production
 
 
 # Use SCSS for stylesheets
