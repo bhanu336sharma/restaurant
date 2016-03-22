@@ -17,8 +17,7 @@ gem 'devise'
 gem 'pry'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'rails_12factor', group: :production
-
+gem 'cloudinary'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
