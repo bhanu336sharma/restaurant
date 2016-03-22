@@ -21,6 +21,7 @@ Product::Application.configure do
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
   config.serve_static_files = true
+  config.assets.precompile += %w( .svg .eot .woff .ttf .png .jpg .gif)
   config.assets.compile = true
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
