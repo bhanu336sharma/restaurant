@@ -9,3 +9,31 @@
 	<%= render :partial => 'login'%>
 	<%= render :partial => "footer" %>
 <% end %>
+
+<ul id="search" class="sticklr">
+    
+    <li>
+        <a href="#" class="glyphicon glyphicon-refresh" ></a>
+        <ul>
+            <li>
+                <a href="http://www.google.com"><b>Go to Google</b></a>
+            </li>
+            <li>
+                <a href="http://www.facebook.com"><b>Like us on Facebook</b></a>
+            </li>
+        </ul>
+    </li>
+</ul>
+<script type="text/javascript">
+
+$('#search').sticklr({
+    menuHeight  : 20,
+    menuWidth   : 200,
+    showOn      : 'hover',
+    tabHeight   : 34,
+    tabWidth    : 32,
+    relativeTo  : 'top',  
+    relativeGap : 100,
+})
+
+</script>

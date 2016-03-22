@@ -42,7 +42,16 @@
           
         </div>
         <div class="navbar-collapse collapse" style="width: 1350px">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav"> 
+            <%if user_signed_in?%> 
+              <li >
+                <div style="width: 50px">.           .</div>
+              </li>   
+            <%else%>
+              <li >
+                <div style="width: 100px">.         .</div>
+              </li>  
+            <%end%>            
             <li class="active"><%=link_to "Home", root_path, method: "get" %></li>
             <li><a href="about">About Us</a></li>
             <li><a href="contact">Contact</a></li>
@@ -90,12 +99,12 @@
               <%end%>
             <%else%>
               <li class="pull-right" >
-                <a data-toggle="modal" data-target="#form2" href="#">Sign In</a>
+                <a data-toggle="modal" data-target="#form2" data-backdrop="static" data-keyboard="false" href="#">Sign In</a>
               </li>
               
               <li class="pull-right" >
-                <a data-toggle="modal" data-target="#form" href="#">Sign Up</a>
-              </li>         
+                <a data-toggle="modal" data-target="#form" data-backdrop="static" data-keyboard="false" href="#">Sign Up</a>
+              </li>      
             <%end%>
           </ul>
         </div>
@@ -146,21 +155,3 @@
 <%= yield %>
 </body>
 </html>
-<script>
-
-  $("#sign_up").click(function(){
-    $('#form').modal({
-    backdrop: 'static',
-    keyboard: false
-    },'show');
-  })
-    
-  $("#sign_in").click(function(){
-    $('#form2').modal({
-    backdrop: 'static',
-    keyboard: false
-    },'show');
-  })   
-
-</script>
-
