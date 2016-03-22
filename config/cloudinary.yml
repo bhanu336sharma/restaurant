@@ -1,9 +1,9 @@
 development:
   cloud_name: "bhanu"
-  api_key: "874837483274837973218773625518"
+  api_key: "973218773625518"
   api_secret: "-o8sbuIaBkL-1r4R-2ehwCrApgQ"
 
 production:
   cloud_name: "bhanu"
-  api_key: "874837483274837973218773625518"
+  api_key: "973218773625518"
   api_secret: "-o8sbuIaBkL-1r4R-2ehwCrApgQ"
