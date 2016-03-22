@@ -1,0 +1,106 @@
+<style>
+  .width {
+     width: 100%; 
+     height: 320px;
+  }
+</style>
+<div align="center">
+  <img src="assets/table.jpg" class="width">
+</div>
+<h2 ALIGN="center"> BOOK YOUR TABLE</h2>
+
+
+<div class="container form-horizontal col-sm-offset-4">
+  <%= form_for @table do |f| %>
+    <div class="form-group field ">
+      <div class="col-sm-2 control-label"><%= f.label :name %><br /></div>
+      <div class="col-sm-4"><%= f.text_field :name %></div>
+    </div>
+    <div class="form-group field">
+      <div class="col-sm-2 control-label"><%= f.label :address  %><br /></div>
+      <div class="col-sm-4"><%= f.text_area :address  %></div>
+    </div>
+    <div class="form-group field">
+      <div class="col-sm-2 control-label"><%= f.label :email %><br /></div>
+      <div class="col-sm-4"><%= f.email_field :email%></div>
+    </div>
+    <div class="form-group field">
+      <div class="col-sm-2 control-label"><%= f.label :phone %><br /></div>
+      <div class="col-sm-4"><%= f.text_field :phone %></div>
+    </div>   
+    <div class="form-group field">
+      <div class="col-sm-2 control-label"><%= f.label :date %><br /></div>
+      <div class="col-sm-4"><%= f.date_select :date %></div>
+    </div>   
+    <div class="form-group field">
+      <div class="col-sm-2 control-label"><%= f.label :number_of_persons %><br /></div>
+      <div class="col-sm-4"><%= f.text_field :person %></div>
+    </div>   
+    <div class="form-group field">
+      <div class="col-sm-2 control-label"><%= f.label :further_requests %><br /></div>
+      <div class="col-sm-4"><%= f.text_area :requests %></div>
+    </div>  
+    <%= f.submit :Submit  %> 
+    <button id="submit" type="submit" class="btn btn-primary col-sm-2 col-sm-offset-2">Submit</button>
+  <% end %>
+</div>
+<script>
+$(document).ready(function() {
+    $('#new_book_table').formValidation({
+        framework: 'bootstrap',
+        fields: {
+          "book_table[name]": {
+              validators: {
+                  notEmpty: {
+                      message: 'Mandatory Field'
+                  }  
+              }
+           },
+           "book_table[address]": {
+              validators: {
+                  notEmpty: {
+                    message: 'Mandatory Field'
+                  }  
+              }
+           },
+           "book_table[email]": {
+              validators: {
+                  notEmpty: {
+                    message: 'Mandatory Field'
+                  },
+                  emailAddress: {
+                    message: 'The email address is not valid'
+                  }   
+              }
+           },
+           "book_table[phone]": {
+              validators: {
+                  notEmpty: {
+                    message: 'Mandatory Field'
+                  },
+                  phone: {
+                    message: 'The value is not an phone'
+                  }   
+              }
+           },
+           "book_table[person]": {
+              validators: {
+                  notEmpty: {
+                      message: 'Mandatory Field'
+                  }  
+              }
+           },
+           "book_table[requests]": {
+              validators: {
+                  notEmpty: {
+                      message: 'Mandatory Field'
+                  }   
+              }
+           },
+        }
+    });
+});
+</script>
+
+
+

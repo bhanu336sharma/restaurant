@@ -1,0 +1,150 @@
+<br/><br/><br/><br/><br/><br/><br/>
+<div class="container col-lg-2 col-lg-offset-1" >
+	<div class="panel" style="width: 300px">
+		<a class="btn btn-info collapsed" data-toggle="collapse" href="#demo1" aria-expanded="false">Indian</a>
+		<div id="demo1" class="collapse" aria-expanded="false" style="height: 0px;"> 
+			<% @food.each do |obj| %>
+		        <%if obj.category == 'indian'%>
+		        	<div style="width=100px; margin-left: 50px;">
+			            <a class="a_tag" data-toggle="modal" data-target="#details1" href="#"><%=obj.name%></a>
+			        </div>
+			        <div class="panel" style="width=150px; margin-left: 100px;">
+			            <button id="<%=obj.id%>" price="<%=obj.price%>" cart="<%=current_user.cart%>" name="<%=obj.name%>" class="btn btn-primary add" data-remote="true" > $<%=obj.price%> Add to Cart</button>
+			        </div>
+
+			        <div class="modal fade" id="details1" aria-hidden="false" role="dialog" tabindex="-1">
+					    <div class="modal-dialog">
+					        <div class="modal-content">
+					        	<div class="modal-header modal-header-primary">
+							        <button data-name="<%= obj.price%>" class="close" aria-label="Close"data-dismiss="modal"type="button">
+							        	<span aria-hidden="true">×</span>
+							        </button>
+						        	<h3 align="center"><%=obj.name%></h3>
+						        </div>
+						        <div class="modal-body">
+						      		<%= image_tag obj.photo_url()  %>        
+						      	</div>
+					        </div>
+					    </div>				     
+					</div>	
+		        <%end%>
+	        <%end%>
+		</div>
+	</div>
+
+	<div class="panel" style="width: 300px">
+		<a class="btn btn-info collapsed" data-toggle="collapse" href="#demo2" aria-expanded="false">Italian</a>
+		<div id="demo2" class="collapse" aria-expanded="false" style="height: 0px;"> 
+			<% @food.each do |obj| %>
+		        <%if obj.category == 'italian'%>
+		        	<div style="width=100px; margin-left: 50px;">
+			            <a class="a_tag" data-toggle="modal" data-target="#details2" href="#"><%=obj.name%></a>
+			        </div>
+			        <div class="panel" style="width=150px; margin-left: 100px;">
+			            <button id="<%=obj.id%>" price="<%=obj.price%>" cart="<%=current_user.cart%>" name="<%=obj.name%>" class="btn btn-primary add" data-remote="true" > $<%=obj.price%> Add to Cart</button>
+			            <br/>
+			        </div>
+
+			        <div class="modal fade" id="details2" aria-hidden="false" role="dialog" tabindex="-1">
+					    <div class="modal-dialog">
+					        <div class="modal-content">
+					        	<div class="modal-header modal-header-primary">
+							        <button data-name="<%= obj.price%>" class="close" aria-label="Close"data-dismiss="modal"type="button">
+							        	<span aria-hidden="true">×</span>
+							        </button>
+						        	<h3 align="center"><%=obj.name%></h3>
+						        </div>
+						        <div class="modal-body">
+						      		<%= image_tag obj.photo_url()  %>        
+						      	</div>
+					        </div>
+					    </div>				     
+					</div>	
+		        <%end%>
+	        <%end%>
+		</div>
+	</div>
+	<div class="panel" style="width: 300px">
+		<a class="btn btn-info collapsed" data-toggle="collapse" href="#demo3" aria-expanded="false">Chinese</a>
+		<div id="demo3" class="collapse" aria-expanded="false" style="height: 0px;"> 
+			<% @food.each do |obj| %>
+		        <%if obj.category == 'chinese'%>
+		        	<div style="width=100px; margin-left: 50px;">
+			            <a class="a_tag" data-toggle="modal" data-target="#details3" href="#"><%=obj.name%></a>
+			        </div>
+			        <div class="panel" style="width=150px; margin-left: 100px;" id >
+			            <button id="<%=obj.id%>" price="<%=obj.price%>" cart="<%=current_user.cart%>" name="<%=obj.name%>" class="btn btn-primary add" data-remote="true" > $<%=obj.price%> Add to Cart</button>
+			        </div>
+
+			        <div class="modal fade" id="details3" aria-hidden="false" role="dialog" tabindex="-1">
+					    <div class="modal-dialog">
+					        <div class="modal-content">
+					        	<div class="modal-header modal-header-primary">
+							        <button data-name="<%= obj.price%>" class="close" aria-label="Close"data-dismiss="modal"type="button">
+							        	<span aria-hidden="true">×</span>
+							        </button>
+						        	<h3 align="center"><%=obj.name%></h3>
+						        </div>
+						        <div class="modal-body">
+						      		<%= image_tag obj.photo_url()  %>        
+						      	</div>
+					        </div>
+					    </div>				     
+					</div>	
+		        <%end%>
+	        <%end%>
+		</div>
+	</div>
+</div>
+
+<!-- <div class="container col-lg-2 col-lg-offset-4" id="my_cart"></div> -->
+<div  class="container col-lg-2 col-lg-offset-4" id="cart">
+    <h4 >My Bag</h4>
+    <table id="cart" class="table table-bordered">
+    	<tr><th>Item</th><th>Price</th></tr>
+    	<tfoot></tfoot>
+    </table>
+</div>
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	
+
+
+<script type="text/javascript">
+	$( document ).ready(function(){
+		var total = 0;
+		$(".a_tag").click(function(){    
+	        $('#details1').modal('show');  
+	    });
+
+	    $(".add").click(function(){
+	    	item = $(this);
+	    	id = <%=current_user.id%>
+	    	var name = item.attr("name")
+	    	// console.log(cart); 
+	        item_price = item.attr("price");
+	        // cart = +item.attr("cart") + +item_price; 
+	        total = +total + +item_price;
+	        console.log(cart);
+	        $("#my_cart").append(name);
+	        // $("#my_cart").append('<br \\>');
+	        $("#cart tbody").append("<tr value="+name+"><td>"+name+"</td><td>"+item_price+"</td><td><button >x</button></td></tr>")
+	        $("#cart tfoot").text("Total = " +total);
+	        $.ajax({    
+	            url: "/add_to_cart",
+	            type: "put",
+	            data: {id: id, cart: cart} ,         
+	            success: function(data){    
+	            },
+	            error:function(){
+	            } 
+	        })
+	    })
+	    $("#cart").on('click', 'tr button', function(){
+	        $(this).parent().parent().remove();
+	        total = total - $(this).parent().siblings().last().html()
+		    $("#cart tfoot").text("Total = " +total);
+    	});
+    })
+</script>

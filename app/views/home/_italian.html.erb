@@ -1,0 +1,57 @@
+<style type="text/css">
+.carousel-control.left,.carousel-control.right {background-image:none;}
+</style>
+
+<div class="container marketing">
+<h2 class="itemsTitle">Italian</h2>
+<div id="italian" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <!-- <div class="item active">
+        <div class="col-lg-3 col-lg-offset-1 " >
+          <img  src="/assets/italian.jpg" alt="Generic placeholder image">
+        </div>
+    </div> -->
+    <% @food.each do |obj| %>
+      <% if obj.category == "italian" %>
+        <div class="item item1">
+            <div class="col-lg-3 col-lg-offset-1">
+              <img src=<%=obj.photo%> alt="Generic placeholder image">
+                <h4 align="center"><%= obj.name %></h4>
+                <h5 align="center"><%= obj.price %></h5>
+                <p align="center"><a class="btn btn-primary"href="#"role="button">Add to cart &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+        </div>
+      <%end%>
+    <% end %>     
+  </div>
+  <a class="left carousel-control" href="#italian" data-slide="prev" role="button">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">&lt;Previous</span>
+  </a>
+  <a class="right carousel-control" href="#italian" data-slide="next" >
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">&lt;Previous</span>
+  </a>
+</div><!-- /.carousel -->
+</div>
+
+<script type="text/javascript">
+  $('.carousel .item1').each(function(){
+  var next = $(this).next();
+  if (!next.length) {
+    next = $(this).siblings(':first');
+  }
+  next.children(':first-child').clone().appendTo($(this));
+
+  if (next.next().length>0) {
+    next.next().children(':first-child').clone().appendTo($(this));
+  }
+  else {
+    $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+  }
+});
+
+  $(document).ready(function(){
+    $($(".item1")[0]).addClass('active')
+  })
+</script>

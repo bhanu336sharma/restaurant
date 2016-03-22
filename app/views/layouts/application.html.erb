@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product</title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <title>Bootstrappage.com free templates</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script
+  src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
+        </script>
+    <!-- Bootstrap core CSS -->
+   
+</head>
+<body>
+<!-- -                              HEADER                         - -->
+<style type="text/css">
+  .center { text-align: center}
+  .modal-header-primary {
+    background-color: #428bca;
+}
+</style>
+
+<div class="navbar-wrapper">
+  <div class="container">
+    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/" id="bootstrap_restaurants">Bootstrap Restaurant</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><%=link_to "Home", root_path, method: "get" %></li>
+            <li><a href="about">About Us</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li><a href="book_a_table">Table Booking</a></li>
+            
+             <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Indian <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <% @food.each do |obj| %>
+                  <% if obj.category == "indian" %>
+                    <li><a href="#"><%= obj.name %></a></li>
+                  <% end %>
+                <% end %>
+              </ul>
+            </li>
+    
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Italian <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <% @food.each do |obj| %>
+                  <% if obj.category == "italian" %>
+                    <li><a href="#"><%= obj.name %></a></li>
+                  <% end %>
+                <% end %>
+              </ul>
+            </li>
+    
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Chinese<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <% @food.each do |obj| %>
+                  <% if obj.category == "chinese" %>
+                    <li><a href="#"><%= obj.name %></a></li>
+                  <% end %>
+                <% end %>
+              </ul>
+            </li>
+
+            <%if user_signed_in?%>
+              
+              <li class="pull-right" ><%=link_to "Sign Out", "/users/sign_out", method: :delete %></li>
+              <li class="pull-right"><p class="navbar-text"><%=current_user.email%>!!</p></li>
+              <%if current_user.role == "admin"%>
+                <li class="pull-right"><a  href="/index"  >View all items </a></li>                
+              <%end%>
+            <%else%>
+              <li class="pull-right" >
+                <a data-toggle="modal" data-target="#form2" href="#">Sign In</a>
+              </li>
+              
+              <li class="pull-right" >
+                <a data-toggle="modal" data-target="#form" href="#">Sign Up</a>
+              </li>         
+            <%end%>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="form" aria-hidden="false" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header modal-header-primary">
+        <button class="close" aria-label="Close" data-dismiss="modal" type="button">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h3 align="center">Sign Up</h3>
+      </div>
+      <div class="modal-body">
+        <%= render :template => 'devise/registrations/new', 
+          :locals => { 
+            :resource => User.new, 
+            :resource_name => :user } %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="form2" aria-hidden="false" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header modal-header-primary">
+        <button class="close" aria-label="Close" data-dismiss="modal" type="button">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h3 align="center" class="text-danger">Sign In</h3>
+      </div>
+      <div class="modal-body">
+        <%= render :template => 'devise/sessions/new', 
+          :locals => { 
+            :resource => User.new, 
+            :resource_name => :user } %>
+      </div>
+    </div>
+  </div>
+</div>       
+</div>
+<!-- -                HEADER ENDS              - -->
+
+<%= yield %>
+</body>
+</html>
+<script>
+
+  $("#sign_up").click(function(){
+    $('#form').modal({
+    backdrop: 'static',
+    keyboard: false
+    },'show');
+  })
+    
+  $("#sign_in").click(function(){
+    $('#form2').modal({
+    backdrop: 'static',
+    keyboard: false
+    },'show');
+  })   
+
+</script>
+

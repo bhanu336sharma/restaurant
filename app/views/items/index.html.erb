@@ -1,0 +1,19 @@
+<div class="container"  >
+    <h1  align="center">ITEMS</h1><br/>
+    <table class="table table-hover table-bordered table-condensed " style="height: 500px">   
+    <tr>
+        <th>NAME</th>
+        <th>PRICE</th>
+    </tr>
+    <% @food.each do |obj| %>
+        <tr>
+            <td><%=obj.name%></td>
+            <td><%=obj.price%></td>
+            <td><%= link_to 'Show', "/items/#{obj.id}" %></td>
+            <td><%= link_to 'EDIT', "/items/#{obj.id}/edit" %></td>
+            <td><%= link_to 'DELETE', "/items/#{obj.id}",  method: :delete , :confirm => "Are you sure you want to delete this item?"  %></td>
+        </tr>
+    <%end%>
+    </table>
+    <h3 align="center"><%=link_to "Add new food item", "/items/new" %> </h3>       
+</div>

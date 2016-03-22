@@ -1,0 +1,11 @@
+<% if  current_user.present? %>
+	<%= render :partial => 'map'%>
+	<%= render :partial => 'body'%>
+	<%= render :partial => 'indian'%>
+	<%= render :partial => "italian"%>
+	<%= render :partial => "chinese" %>
+	<%= render :partial => "footer" %>
+<% else %>
+	<%= render :partial => 'login'%>
+	<%= render :partial => "footer" %>
+<% end %>

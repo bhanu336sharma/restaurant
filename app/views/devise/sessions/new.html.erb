@@ -1,0 +1,62 @@
+<style type="text/css">
+  .center { text-align: left}
+</style>
+<div class="container form-horizontal col-sm-offset-4 bootstrap">
+
+<div id="login">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), id: "login_form") do |f| %>
+    <div class="form-group field center">
+      <div class="center"><%= f.label :email %><br/></div>
+      <div class="center" name="email"><%= f.email_field :email, autofocus: true %></div>
+    </div>
+    
+
+    <div class="form-group field center">
+      <div class="center"><%= f.label :password %><br/></div>
+      <div class="center" name="password"><%= f.password_field :password, autocomplete: "on" %></div>
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+      <div >
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+    <br/>
+    <div >
+      <%= f.submit "Log in", class: "btn btn-primary"  %>
+    </div>
+  <% end %>
+</div>
+</div>
+<br/><br/>
+
+
+<script>
+$(document).ready(function() {
+  $('#login form').formValidation({
+    framework: 'bootstrap',
+    fields: {
+      "user[email]": {
+        validators: {
+          notEmpty: {
+            message: 'Username is required'
+          },
+          emailAddress: {
+            message: 'Email address is not valid'
+          }   
+        }
+      },
+      "user[password]": {
+        validators: {
+          notEmpty: {
+              message: 'The password is required'
+          }
+        }
+      }
+    }
+  });
+});
+</script>
+
+

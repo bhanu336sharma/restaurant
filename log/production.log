@@ -1,0 +1,382 @@
+I, [2016-03-21T16:07:23.759424 #1030]  INFO -- : Started GET "/" for 127.0.0.1 at 2016-03-21 16:07:23 +0530
+I, [2016-03-21T16:07:23.885689 #1030]  INFO -- : Processing by HomeController#index as HTML
+I, [2016-03-21T16:07:23.991459 #1030]  INFO -- :   Rendered home/_login.html.erb (0.8ms)
+I, [2016-03-21T16:07:23.999680 #1030]  INFO -- :   Rendered home/_footer.html.erb (1.3ms)
+I, [2016-03-21T16:07:24.000462 #1030]  INFO -- :   Rendered home/index.html.erb within layouts/application (30.2ms)
+E, [2016-03-21T16:08:40.544322 #1030] ERROR -- : SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"
+I, [2016-03-21T16:08:40.554482 #1030]  INFO -- : Completed 500 Internal Server Error in 76668ms
+F, [2016-03-21T16:08:40.566227 #1030] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"):
+    51:              <li class="dropdown">
+    52:               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Indian <b class="caret"></b></a>
+    53:               <ul class="dropdown-menu">
+    54:                 <% @food.each do |obj| %>
+    55:                   <% if obj.category == "indian" %>
+    56:                     <li><a href="#"><%= obj.name %></a></li>
+    57:                   <% end %>
+  app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb___275224894779151084_33864560'
+
+
+I, [2016-03-21T16:08:40.616445 #1030]  INFO -- : Started GET "/" for 127.0.0.1 at 2016-03-21 16:08:40 +0530
+I, [2016-03-21T16:08:40.621333 #1030]  INFO -- : Processing by HomeController#index as HTML
+I, [2016-03-21T16:08:40.627521 #1030]  INFO -- :   Rendered home/_login.html.erb (0.1ms)
+I, [2016-03-21T16:08:40.628518 #1030]  INFO -- :   Rendered home/_footer.html.erb (0.1ms)
+I, [2016-03-21T16:08:40.628938 #1030]  INFO -- :   Rendered home/index.html.erb within layouts/application (3.6ms)
+E, [2016-03-21T16:08:40.806681 #1030] ERROR -- : SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"
+I, [2016-03-21T16:08:40.809422 #1030]  INFO -- : Completed 500 Internal Server Error in 187ms
+F, [2016-03-21T16:08:40.832232 #1030] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"):
+    51:              <li class="dropdown">
+    52:               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Indian <b class="caret"></b></a>
+    53:               <ul class="dropdown-menu">
+    54:                 <% @food.each do |obj| %>
+    55:                   <% if obj.category == "indian" %>
+    56:                     <li><a href="#"><%= obj.name %></a></li>
+    57:                   <% end %>
+  app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb___275224894779151084_33864560'
+
+
+I, [2016-03-21T16:08:40.838185 #1030]  INFO -- : Started GET "/" for 127.0.0.1 at 2016-03-21 16:08:40 +0530
+I, [2016-03-21T16:08:40.845703 #1030]  INFO -- : Processing by HomeController#index as HTML
+I, [2016-03-21T16:08:40.856216 #1030]  INFO -- :   Rendered home/_login.html.erb (0.2ms)
+I, [2016-03-21T16:08:40.857387 #1030]  INFO -- :   Rendered home/_footer.html.erb (0.2ms)
+I, [2016-03-21T16:08:40.857967 #1030]  INFO -- :   Rendered home/index.html.erb within layouts/application (8.6ms)
+E, [2016-03-21T16:08:40.863749 #1030] ERROR -- : SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"
+I, [2016-03-21T16:08:40.866238 #1030]  INFO -- : Completed 500 Internal Server Error in 19ms
+F, [2016-03-21T16:08:40.873097 #1030] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"):
+    51:              <li class="dropdown">
+    52:               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Indian <b class="caret"></b></a>
+    53:               <ul class="dropdown-menu">
+    54:                 <% @food.each do |obj| %>
+    55:                   <% if obj.category == "indian" %>
+    56:                     <li><a href="#"><%= obj.name %></a></li>
+    57:                   <% end %>
+  app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb___275224894779151084_33864560'
+
+
+I, [2016-03-21T16:08:40.875098 #1030]  INFO -- : Started GET "/" for 127.0.0.1 at 2016-03-21 16:08:40 +0530
+I, [2016-03-21T16:08:40.878051 #1030]  INFO -- : Processing by HomeController#index as HTML
+I, [2016-03-21T16:08:40.881781 #1030]  INFO -- :   Rendered home/_login.html.erb (0.2ms)
+I, [2016-03-21T16:08:40.882668 #1030]  INFO -- :   Rendered home/_footer.html.erb (0.1ms)
+I, [2016-03-21T16:08:40.883241 #1030]  INFO -- :   Rendered home/index.html.erb within layouts/application (3.0ms)
+E, [2016-03-21T16:08:40.891678 #1030] ERROR -- : SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"
+I, [2016-03-21T16:08:40.896472 #1030]  INFO -- : Completed 500 Internal Server Error in 18ms
+F, [2016-03-21T16:08:40.906252 #1030] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"):
+    51:              <li class="dropdown">
+    52:               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Indian <b class="caret"></b></a>
+    53:               <ul class="dropdown-menu">
+    54:                 <% @food.each do |obj| %>
+    55:                   <% if obj.category == "indian" %>
+    56:                     <li><a href="#"><%= obj.name %></a></li>
+    57:                   <% end %>
+  app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb___275224894779151084_33864560'
+
+
+I, [2016-03-21T16:08:40.911753 #1030]  INFO -- : Started GET "/" for 127.0.0.1 at 2016-03-21 16:08:40 +0530
+I, [2016-03-21T16:08:40.914594 #1030]  INFO -- : Processing by HomeController#index as HTML
+I, [2016-03-21T16:08:40.919302 #1030]  INFO -- :   Rendered home/_login.html.erb (0.1ms)
+I, [2016-03-21T16:08:40.919891 #1030]  INFO -- :   Rendered home/_footer.html.erb (0.1ms)
+I, [2016-03-21T16:08:40.920238 #1030]  INFO -- :   Rendered home/index.html.erb within layouts/application (2.2ms)
+E, [2016-03-21T16:08:40.923044 #1030] ERROR -- : SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"
+I, [2016-03-21T16:08:40.924508 #1030]  INFO -- : Completed 500 Internal Server Error in 9ms
+F, [2016-03-21T16:08:40.929222 #1030] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"):
+    51:              <li class="dropdown">
+    52:               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Indian <b class="caret"></b></a>
+    53:               <ul class="dropdown-menu">
+    54:                 <% @food.each do |obj| %>
+    55:                   <% if obj.category == "indian" %>
+    56:                     <li><a href="#"><%= obj.name %></a></li>
+    57:                   <% end %>
+  app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb___275224894779151084_33864560'
+
+
+I, [2016-03-21T16:08:43.522157 #1030]  INFO -- : Started GET "/" for 127.0.0.1 at 2016-03-21 16:08:43 +0530
+I, [2016-03-21T16:08:43.529245 #1030]  INFO -- : Processing by HomeController#index as HTML
+I, [2016-03-21T16:08:43.540693 #1030]  INFO -- :   Rendered home/_login.html.erb (0.1ms)
+I, [2016-03-21T16:08:43.541797 #1030]  INFO -- :   Rendered home/_footer.html.erb (0.1ms)
+I, [2016-03-21T16:08:43.542595 #1030]  INFO -- :   Rendered home/index.html.erb within layouts/application (10.2ms)
+E, [2016-03-21T16:08:43.550265 #1030] ERROR -- : SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"
+I, [2016-03-21T16:08:43.554273 #1030]  INFO -- : Completed 500 Internal Server Error in 23ms
+F, [2016-03-21T16:08:43.564699 #1030] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"):
+    51:              <li class="dropdown">
+    52:               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Indian <b class="caret"></b></a>
+    53:               <ul class="dropdown-menu">
+    54:                 <% @food.each do |obj| %>
+    55:                   <% if obj.category == "indian" %>
+    56:                     <li><a href="#"><%= obj.name %></a></li>
+    57:                   <% end %>
+  app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb___275224894779151084_33864560'
+
+
+I, [2016-03-21T16:08:45.566391 #1030]  INFO -- : Started GET "/" for 127.0.0.1 at 2016-03-21 16:08:45 +0530
+I, [2016-03-21T16:08:45.571993 #1030]  INFO -- : Processing by HomeController#index as HTML
+I, [2016-03-21T16:08:45.581989 #1030]  INFO -- :   Rendered home/_login.html.erb (0.2ms)
+I, [2016-03-21T16:08:45.585463 #1030]  INFO -- :   Rendered home/_footer.html.erb (0.1ms)
+I, [2016-03-21T16:08:45.586326 #1030]  INFO -- :   Rendered home/index.html.erb within layouts/application (11.2ms)
+E, [2016-03-21T16:08:45.594722 #1030] ERROR -- : SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"
+I, [2016-03-21T16:08:45.597130 #1030]  INFO -- : Completed 500 Internal Server Error in 24ms
+F, [2016-03-21T16:08:45.615440 #1030] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"):
+    51:              <li class="dropdown">
+    52:               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Indian <b class="caret"></b></a>
+    53:               <ul class="dropdown-menu">
+    54:                 <% @food.each do |obj| %>
+    55:                   <% if obj.category == "indian" %>
+    56:                     <li><a href="#"><%= obj.name %></a></li>
+    57:                   <% end %>
+  app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb___275224894779151084_33864560'
+
+
+I, [2016-03-21T16:08:47.043819 #1030]  INFO -- : Started GET "/" for 127.0.0.1 at 2016-03-21 16:08:47 +0530
+I, [2016-03-21T16:08:47.050160 #1030]  INFO -- : Processing by HomeController#index as HTML
+I, [2016-03-21T16:08:47.058691 #1030]  INFO -- :   Rendered home/_login.html.erb (0.1ms)
+I, [2016-03-21T16:08:47.059585 #1030]  INFO -- :   Rendered home/_footer.html.erb (0.1ms)
+I, [2016-03-21T16:08:47.060591 #1030]  INFO -- :   Rendered home/index.html.erb within layouts/application (7.0ms)
+E, [2016-03-21T16:08:47.068101 #1030] ERROR -- : SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"
+I, [2016-03-21T16:08:47.074031 #1030]  INFO -- : Completed 500 Internal Server Error in 19ms
+F, [2016-03-21T16:08:47.083106 #1030] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"):
+    51:              <li class="dropdown">
+    52:               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Indian <b class="caret"></b></a>
+    53:               <ul class="dropdown-menu">
+    54:                 <% @food.each do |obj| %>
+    55:                   <% if obj.category == "indian" %>
+    56:                     <li><a href="#"><%= obj.name %></a></li>
+    57:                   <% end %>
+  app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb___275224894779151084_33864560'
+
+
+I, [2016-03-21T16:10:30.213882 #1030]  INFO -- : Started GET "/" for 127.0.0.1 at 2016-03-21 16:10:30 +0530
+I, [2016-03-21T16:10:30.220394 #1030]  INFO -- : Processing by HomeController#index as HTML
+I, [2016-03-21T16:10:30.229415 #1030]  INFO -- :   Rendered home/_login.html.erb (0.1ms)
+I, [2016-03-21T16:10:30.230718 #1030]  INFO -- :   Rendered home/_footer.html.erb (0.2ms)
+I, [2016-03-21T16:10:30.233436 #1030]  INFO -- :   Rendered home/index.html.erb within layouts/application (8.0ms)
+E, [2016-03-21T16:10:30.241431 #1030] ERROR -- : SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"
+I, [2016-03-21T16:10:30.247327 #1030]  INFO -- : Completed 500 Internal Server Error in 26ms
+F, [2016-03-21T16:10:30.270421 #1030] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"):
+  app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb___275224894779151084_33864560'
+
+
+I, [2016-03-21T16:10:31.832173 #1030]  INFO -- : Started GET "/" for 127.0.0.1 at 2016-03-21 16:10:31 +0530
+I, [2016-03-21T16:10:31.840879 #1030]  INFO -- : Processing by HomeController#index as HTML
+I, [2016-03-21T16:10:31.849447 #1030]  INFO -- :   Rendered home/_login.html.erb (0.1ms)
+I, [2016-03-21T16:10:31.851007 #1030]  INFO -- :   Rendered home/_footer.html.erb (0.2ms)
+I, [2016-03-21T16:10:31.851726 #1030]  INFO -- :   Rendered home/index.html.erb within layouts/application (7.7ms)
+E, [2016-03-21T16:10:31.859039 #1030] ERROR -- : SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"
+I, [2016-03-21T16:10:31.864290 #1030]  INFO -- : Completed 500 Internal Server Error in 20ms
+F, [2016-03-21T16:10:31.877833 #1030] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"):
+  app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb___275224894779151084_33864560'
+
+
+I, [2016-03-21T16:11:11.502047 #1030]  INFO -- : Started GET "/" for 127.0.0.1 at 2016-03-21 16:11:11 +0530
+I, [2016-03-21T16:11:11.509488 #1030]  INFO -- : Processing by HomeController#index as HTML
+I, [2016-03-21T16:11:11.519356 #1030]  INFO -- :   Rendered home/_login.html.erb (0.2ms)
+I, [2016-03-21T16:11:11.520659 #1030]  INFO -- :   Rendered home/_footer.html.erb (0.2ms)
+I, [2016-03-21T16:11:11.521157 #1030]  INFO -- :   Rendered home/index.html.erb within layouts/application (8.9ms)
+E, [2016-03-21T16:11:11.530251 #1030] ERROR -- : SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"
+I, [2016-03-21T16:11:11.535408 #1030]  INFO -- : Completed 500 Internal Server Error in 25ms
+F, [2016-03-21T16:11:11.558033 #1030] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"):
+  app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb___275224894779151084_33864560'
+
+
+I, [2016-03-21T16:11:15.702296 #1030]  INFO -- : Started GET "/students/" for 127.0.0.1 at 2016-03-21 16:11:15 +0530
+F, [2016-03-21T16:11:15.713758 #1030] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/students"):
+  actionpack (4.0.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.13) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.13) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.13) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.13) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.13) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.13) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.13) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.13) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.13) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.13) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.13) lib/rails/engine.rb:511:in `call'
+  railties (4.0.13) lib/rails/application.rb:97:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /home/bhanu/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/bhanu/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/bhanu/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2016-03-21T16:11:23.575750 #1030]  INFO -- : Started GET "/" for 127.0.0.1 at 2016-03-21 16:11:23 +0530
+I, [2016-03-21T16:11:23.587505 #1030]  INFO -- : Processing by HomeController#index as HTML
+I, [2016-03-21T16:11:23.597008 #1030]  INFO -- :   Rendered home/_login.html.erb (0.1ms)
+I, [2016-03-21T16:11:23.598366 #1030]  INFO -- :   Rendered home/_footer.html.erb (0.2ms)
+I, [2016-03-21T16:11:23.598957 #1030]  INFO -- :   Rendered home/index.html.erb within layouts/application (8.4ms)
+E, [2016-03-21T16:11:23.610253 #1030] ERROR -- : SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"
+I, [2016-03-21T16:11:23.618280 #1030]  INFO -- : Completed 500 Internal Server Error in 28ms
+F, [2016-03-21T16:11:23.638451 #1030] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"):
+  app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb___275224894779151084_33864560'
+
+
+I, [2016-03-21T16:11:25.864408 #1030]  INFO -- : Started GET "/" for 127.0.0.1 at 2016-03-21 16:11:25 +0530
+I, [2016-03-21T16:11:25.872240 #1030]  INFO -- : Processing by HomeController#index as HTML
+I, [2016-03-21T16:11:25.882937 #1030]  INFO -- :   Rendered home/_login.html.erb (0.1ms)
+I, [2016-03-21T16:11:25.884389 #1030]  INFO -- :   Rendered home/_footer.html.erb (0.2ms)
+I, [2016-03-21T16:11:25.884969 #1030]  INFO -- :   Rendered home/index.html.erb within layouts/application (9.1ms)
+E, [2016-03-21T16:11:25.894235 #1030] ERROR -- : SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"
+I, [2016-03-21T16:11:25.898269 #1030]  INFO -- : Completed 500 Internal Server Error in 24ms
+F, [2016-03-21T16:11:25.907186 #1030] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"):
+  app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb___275224894779151084_33864560'
+
+
+I, [2016-03-21T16:11:52.902819 #1030]  INFO -- : Started GET "/chinese" for 127.0.0.1 at 2016-03-21 16:11:52 +0530
+F, [2016-03-21T16:11:52.908634 #1030] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/chinese"):
+  actionpack (4.0.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.13) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.13) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.13) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.13) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.13) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.13) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.13) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.13) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.13) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.13) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.13) lib/rails/engine.rb:511:in `call'
+  railties (4.0.13) lib/rails/application.rb:97:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /home/bhanu/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/bhanu/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/bhanu/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2016-03-21T16:14:22.651137 #1030]  INFO -- : Started GET "/chinese" for 127.0.0.1 at 2016-03-21 16:14:22 +0530
+F, [2016-03-21T16:14:22.660958 #1030] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/chinese"):
+  actionpack (4.0.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.13) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.13) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.13) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.13) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.13) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.13) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.13) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.13) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.13) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.13) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.13) lib/rails/engine.rb:511:in `call'
+  railties (4.0.13) lib/rails/application.rb:97:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /home/bhanu/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/bhanu/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/bhanu/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2016-03-21T16:14:24.616018 #1030]  INFO -- : Started GET "/chinese" for 127.0.0.1 at 2016-03-21 16:14:24 +0530
+F, [2016-03-21T16:14:24.625752 #1030] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/chinese"):
+  actionpack (4.0.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.13) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.13) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.13) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.13) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.13) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.13) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.13) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.13) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.13) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.13) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.13) lib/rails/engine.rb:511:in `call'
+  railties (4.0.13) lib/rails/application.rb:97:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /home/bhanu/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/bhanu/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/bhanu/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2016-03-21T16:14:28.185340 #1030]  INFO -- : Started GET "/" for 127.0.0.1 at 2016-03-21 16:14:28 +0530
+I, [2016-03-21T16:14:28.194270 #1030]  INFO -- : Processing by HomeController#index as HTML
+I, [2016-03-21T16:14:28.200356 #1030]  INFO -- :   Rendered home/_login.html.erb (0.1ms)
+I, [2016-03-21T16:14:28.201347 #1030]  INFO -- :   Rendered home/_footer.html.erb (0.1ms)
+I, [2016-03-21T16:14:28.201983 #1030]  INFO -- :   Rendered home/index.html.erb within layouts/application (4.9ms)
+E, [2016-03-21T16:14:28.217873 #1030] ERROR -- : SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"
+I, [2016-03-21T16:14:28.220433 #1030]  INFO -- : Completed 500 Internal Server Error in 25ms
+F, [2016-03-21T16:14:28.230545 #1030] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"):
+    51:              <li class="dropdown">
+    52:               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Indian <b class="caret"></b></a>
+    53:               <ul class="dropdown-menu">
+    54:                 <% @food.each do |obj| %>
+    55:                   <% if obj.category == "indian" %>
+    56:                     <li><a href="#"><%= obj.name %></a></li>
+    57:                   <% end %>
+  app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb___275224894779151084_33864560'
+
+
+I, [2016-03-21T16:14:30.027122 #1030]  INFO -- : Started GET "/" for 127.0.0.1 at 2016-03-21 16:14:30 +0530
+I, [2016-03-21T16:14:30.032326 #1030]  INFO -- : Processing by HomeController#index as HTML
+I, [2016-03-21T16:14:30.037323 #1030]  INFO -- :   Rendered home/_login.html.erb (0.2ms)
+I, [2016-03-21T16:14:30.038310 #1030]  INFO -- :   Rendered home/_footer.html.erb (0.1ms)
+I, [2016-03-21T16:14:30.038817 #1030]  INFO -- :   Rendered home/index.html.erb within layouts/application (3.7ms)
+E, [2016-03-21T16:14:30.042267 #1030] ERROR -- : SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"
+I, [2016-03-21T16:14:30.044248 #1030]  INFO -- : Completed 500 Internal Server Error in 11ms
+F, [2016-03-21T16:14:30.053685 #1030] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"):
+    51:              <li class="dropdown">
+    52:               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Indian <b class="caret"></b></a>
+    53:               <ul class="dropdown-menu">
+    54:                 <% @food.each do |obj| %>
+    55:                   <% if obj.category == "indian" %>
+    56:                     <li><a href="#"><%= obj.name %></a></li>
+    57:                   <% end %>
+  app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb___275224894779151084_33864560'
+
+
+I, [2016-03-21T16:15:08.662202 #1030]  INFO -- : Started GET "/" for 127.0.0.1 at 2016-03-21 16:15:08 +0530
+I, [2016-03-21T16:15:08.666789 #1030]  INFO -- : Processing by HomeController#index as HTML
+I, [2016-03-21T16:15:08.673681 #1030]  INFO -- :   Rendered home/_login.html.erb (0.1ms)
+I, [2016-03-21T16:15:08.676727 #1030]  INFO -- :   Rendered home/_footer.html.erb (0.1ms)
+I, [2016-03-21T16:15:08.678406 #1030]  INFO -- :   Rendered home/index.html.erb within layouts/application (8.1ms)
+E, [2016-03-21T16:15:08.685844 #1030] ERROR -- : SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"
+I, [2016-03-21T16:15:08.688161 #1030]  INFO -- : Completed 500 Internal Server Error in 21ms
+F, [2016-03-21T16:15:08.697973 #1030] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"):
+  app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb___275224894779151084_33864560'
+
+
+I, [2016-03-21T16:15:10.428663 #1030]  INFO -- : Started GET "/" for 127.0.0.1 at 2016-03-21 16:15:10 +0530
+I, [2016-03-21T16:15:10.433642 #1030]  INFO -- : Processing by HomeController#index as HTML
+I, [2016-03-21T16:15:10.441448 #1030]  INFO -- :   Rendered home/_login.html.erb (0.1ms)
+I, [2016-03-21T16:15:10.444255 #1030]  INFO -- :   Rendered home/_footer.html.erb (0.2ms)
+I, [2016-03-21T16:15:10.444984 #1030]  INFO -- :   Rendered home/index.html.erb within layouts/application (8.4ms)
+E, [2016-03-21T16:15:10.454229 #1030] ERROR -- : SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"
+I, [2016-03-21T16:15:10.461558 #1030]  INFO -- : Completed 500 Internal Server Error in 25ms
+F, [2016-03-21T16:15:10.476593 #1030] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"):
+  app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb___275224894779151084_33864560'
+
+

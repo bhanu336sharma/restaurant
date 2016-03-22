@@ -1,0 +1,10 @@
+<br/><br/><br/><br/><div class='panel'>
+	<h2 align='center'>
+		<%=@item.name%>
+	</h2>
+	<h4 align='center'>Price <%=@item.price%></h4><br/>
+	<h4 align='center'>Category <%= @item.category %></h4>
+	<div align="center"><%= image_tag @item.photo_url(), :size => '280x280' if @item.photo? %></div>
+
+</div>
+	
