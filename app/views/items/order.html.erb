@@ -101,8 +101,8 @@
 <div  class="container col-lg-2 col-lg-offset-4" id="cart">
     <h4 >My Bag</h4>
     <table id="cart" class="table table-hover table-bordered table-condensed ">
-    	<tr style="background-color: #0066cc; color: white;"><th>Item</th><th>Price</th></tr>
-    	<tfoot style="background-color: #00ccff; color: white;"></tfoot>
+    	<tr style="background-color: #0066cc; color: white;"><th>Item</th><th>Price</th><th></th></tr>
+    	<tfoot ></tfoot>
     </table>
 </div>
 
@@ -129,7 +129,7 @@
 	        console.log(cart);
 	        $("#my_cart").append(name);
 	        // $("#my_cart").append('<br \\>');
-	        $("#cart tbody").append("<tr value="+name+"><td>"+name+"</td><td>"+item_price+"</td><td><button >x</button></td></tr>")
+	        $("#cart tbody").append("<tr style="background-color: #00ccff; color: white;" value="+name+"><td>"+name+"</td><td>"+item_price+"</td><td><button >x</button></td></tr>")
 	        $("#cart tfoot").text("Total = " +total);
 	        $.ajax({    
 	            url: "/add_to_cart",
