@@ -1,14 +1,13 @@
 class ItemsController < ApplicationController
-	before_action :index , only: ['index', 'show_all', 'order']
-	before_action :show, only: ['show', 'edit', 'update', 'add_to_cart', 'destroy']
+	before_action :show, only: ['update', 'add_to_cart', 'destroy']
 
 	def new
 		@item = Item.new 
-
 	end
 
 	def create
-		@item = Item.create(item_params)
+		binding.pry
+		@item = Item.new(item_params)
 		if @item.save
    			redirect_to "/"
  		else 
