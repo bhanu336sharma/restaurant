@@ -1,4 +1,8 @@
-<br/><br/><br/><br/><br/><br/><br/>
+<style type="text/css">
+	tbody tr{
+		background-color: #00ccff; color: white;
+	}
+</style><br/><br/><br/><br/><br/><br/><br/>
 <div class="container col-lg-2 col-lg-offset-1" >
 	<div class="panel" style="width: 300px">
 		<a class="btn btn-info collapsed" data-toggle="collapse" href="#demo1" aria-expanded="false">Indian</a>
@@ -129,7 +133,7 @@
 	        console.log(cart);
 	        $("#my_cart").append(name);
 	        // $("#my_cart").append('<br \\>');
-	        $("#cart tbody").append("<tr style="background-color: #00ccff; color: white;" value="+name+"><td>"+name+"</td><td>"+item_price+"</td><td><button >x</button></td></tr>")
+	        $("#cart tbody").append("<tr value="+name+"><td>"+name+"</td><td>"+item_price+"</td><td><button >x</button></td></tr>")
 	        $("#cart tfoot").text("Total = " +total);
 	        $.ajax({    
 	            url: "/add_to_cart",
