@@ -14,31 +14,31 @@
   <%= form_for @table do |f| %>
     <div class="form-group field ">
       <div class="col-sm-2 control-label"><%= f.label :name %><br /></div>
-      <div class="col-sm-4"><%= f.text_field :name %></div>
+      <div class="col-sm-4" col="20"><%= f.text_field :name %></div>
     </div>
     <div class="form-group field">
       <div class="col-sm-2 control-label"><%= f.label :address  %><br /></div>
-      <div class="col-sm-4"><%= f.text_area :address  %></div>
+      <div class="col-sm-4" col="20"><%= f.text_area :address  %></div>
     </div>
     <div class="form-group field">
       <div class="col-sm-2 control-label"><%= f.label :email %><br /></div>
-      <div class="col-sm-4"><%= f.email_field :email%></div>
+      <div class="col-sm-4" col="20"><%= f.email_field :email%></div>
     </div>
     <div class="form-group field">
       <div class="col-sm-2 control-label"><%= f.label :phone %><br /></div>
-      <div class="col-sm-4"><%= f.text_field :phone %></div>
+      <div class="col-sm-4" col="20"><%= f.text_field :phone %></div>
     </div>   
     <div class="form-group field">
       <div class="col-sm-2 control-label"><%= f.label :date %><br /></div>
-      <div class="col-sm-4"><%= f.date_select :date %></div>
+      <div class="col-sm-4" col="20"><%= f.date_select :date %></div>
     </div>   
     <div class="form-group field">
       <div class="col-sm-2 control-label"><%= f.label :number_of_persons %><br /></div>
-      <div class="col-sm-4"><%= f.text_field :person %></div>
+      <div class="col-sm-4" col="20"><%= f.text_field :person %></div>
     </div>   
     <div class="form-group field">
       <div class="col-sm-2 control-label"><%= f.label :further_requests %><br /></div>
-      <div class="col-sm-4"><%= f.text_area :requests %></div>
+      <div class="col-sm-4" col="20"><%= f.text_area :requests %></div>
     </div>  
     <%= f.submit :Submit  %> 
     <button id="submit" type="submit" class="btn btn-primary col-sm-2 col-sm-offset-2">Submit</button>
