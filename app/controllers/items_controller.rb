@@ -7,9 +7,7 @@ class ItemsController < ApplicationController
 
 	def create
 		@item = Item.new(item_params)
-		puts "=============================================="
 		puts @item
-		puts "=============================================="
 		if @item.save!
    			redirect_to "/"
  		else 
@@ -25,7 +23,12 @@ class ItemsController < ApplicationController
 		@item= Item.find(params[:id])
 	end
 
+	def edit
+		@item = Item.find(params[:id])
+	end
+
 	def update
+		@item = Item.find(params[:id])		
 	    if @item.update(item_params)
 	       redirect_to "/"
 	    end

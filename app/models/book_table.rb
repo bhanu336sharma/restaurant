@@ -1,2 +1,2 @@
-class BookTable < ActiveRecord::Base
+class BookTable < ActiveRecord::Base	
 end

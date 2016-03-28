@@ -20,6 +20,7 @@ gem 'mini_magick'
 gem 'cloudinary'
 gem 'fog'
 gem 'rails_db_info'
+gem 'twilio-ruby','~> 4.1.0'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160323065728) do
+ActiveRecord::Schema.define(version: 20160328062157) do
 
   create_table "book_tables", force: true do |t|
     t.string   "name"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20160323065728) do
     t.text     "requests"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "pin"
   end
 
   create_table "items", force: true do |t|
@@ -32,6 +33,14 @@ ActiveRecord::Schema.define(version: 20160323065728) do
     t.datetime "updated_at"
     t.string   "category"
     t.string   "photo"
+  end
+
+  create_table "phone_numbers", force: true do |t|
+    t.string   "phone_number"
+    t.string   "pin"
+    t.boolean  "verified"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "students", force: true do |t|
