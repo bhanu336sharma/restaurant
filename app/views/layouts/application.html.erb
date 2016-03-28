@@ -62,7 +62,7 @@
               <ul class="dropdown-menu">
                 <% @food.each do |obj| %>
                   <% if obj.category == "indian" %>
-                    <li><a href="#"><%= obj.name %></a></li>
+                    <li><%= link_to '<%= obj.name %>', "/items/#{obj.id}" %></li>
                   <% end %>
                 <% end %>
               </ul>
@@ -73,7 +73,7 @@
               <ul class="dropdown-menu">
                 <% @food.each do |obj| %>
                   <% if obj.category == "italian" %>
-                    <li><a href="#"><%= obj.name %></a></li>
+                    <li><%= link_to '<%= obj.name %>', "/items/#{obj.id}" %></li>
                   <% end %>
                 <% end %>
               </ul>
@@ -84,7 +84,7 @@
               <ul class="dropdown-menu">
                 <% @food.each do |obj| %>
                   <% if obj.category == "chinese" %>
-                    <li><a href="#"><%= obj.name %></a></li>
+                    <li><%= link_to '<%= obj.name %>', "/items/#{obj.id}" %></li>
                   <% end %>
                 <% end %>
               </ul>
