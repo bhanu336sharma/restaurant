@@ -26,13 +26,7 @@
 </head>
 <body>
 <!-- -                              HEADER                         - -->
-
-<% if notice %>
-  <div class = "alert alert-success"><%=notice%></div>
-<% elsif alert %>
-  <div class = "alert alert-danger"><%=alert%></div>
-<%end%>
-<div class="navbar-wrapper">
+<div class="navbar-wrapper header">
   <div class="container">
     <div class="navbar navbar-inverse navbar-static-top" role="navigation">
       <div class="container">
@@ -152,10 +146,26 @@
       </div>
     </div>
   </div>
-</div>       
+</div> 
+<div>
+<% if notice %>
+  <div class = "alert alert-success"><%=notice%></div>
+<% elsif alert %>
+  <div class = "alert alert-danger"><%=alert%></div>
+<%end%>
 </div>
 <!-- -                HEADER ENDS              - -->
 
 <%= yield %>
 </body>
 </html>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.header').fadeOut(); 
+    setTimeout(function(){
+      $(".alert").slideUp()
+    }, 2000);
+    $('.header').delay(1000).fadeIn();    
+  })
+
+</script>
