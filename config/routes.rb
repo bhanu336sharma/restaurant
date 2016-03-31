@@ -4,25 +4,24 @@ Product::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  resources :phone_numbers, only: [:new, :create]
-  post 'phone_numbers/verify' => "phone_numbers#verify"
   
   root 'home#index'
+  resources :items
+  resources :book_tables
 
   get '/about' => 'items#about'
   get '/contact' => 'items#contact'
   get '/index' => 'items#index'
   get '/order' => 'items#order'
-  get '/items/:id/add' => 'items#add'
-
-  
+  get '/items/:id/add' => 'items#add'  
 
   get 'book_a_table' => 'book_tables#new'
+  post 'book_tables/verify' => "book_tables#verify"
+  post 'create_phone' => "book_tables#create_phone"
 
   devise_scope :user do
     put "/add_to_cart" => "registrations#add_to_cart"
   end
-
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -31,9 +30,7 @@ Product::Application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  resources :items
-  resources :book_tables
-
+  
   # Example resource route with options:
   #   resources :products do
   #     member do

@@ -11,19 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160328062157) do
+ActiveRecord::Schema.define(version: 20160331093058) do
 
   create_table "book_tables", force: true do |t|
     t.string   "name"
     t.text     "address"
     t.string   "email"
-    t.integer  "phone"
     t.date     "date"
     t.integer  "person"
     t.text     "requests"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "pin"
+    t.boolean  "verified"
+    t.string   "phone"
   end
 
   create_table "items", force: true do |t|

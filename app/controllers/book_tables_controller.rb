@@ -12,6 +12,22 @@ class BookTablesController < ApplicationController
 			render "/book_a_table"
 		end
 	end
+
+	def create_phone
+	 	@table = BookTable.create(phone: params[:phone].gsub(" ","+"))
+		@table.generate_pin
+	  	@table.send_pin
+	  	render :json => {status: "ok", data: @table}
+	end
+
+	def verify
+		binding.pry
+	 	@table = BookTable.find_by(phone: params[:hidden_phone])
+	  	@table.verify(params[:pin])	 
+	  	respond_to do |format|
+		    format.js
+		end 	
+	end	
 	
 	def index
 		redirect_to "/", notice: "Confirmation email has been sent"
