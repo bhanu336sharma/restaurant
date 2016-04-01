@@ -244,6 +244,9 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     slop (3.6.0)
+    social-share-button (0.2.0)
+      coffee-rails
+      sass-rails
     sprockets (2.12.4)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -296,6 +299,7 @@ DEPENDENCIES
   rails_db_info
   sass-rails (~> 4.0.2)
   sdoc
+  social-share-button
   sqlite3
   therubyracer
   turbolinks
