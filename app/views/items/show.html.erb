@@ -4,7 +4,7 @@
 	</h2>
 	<h4 align='center'>Price <%=@item.price%></h4><br/>
 	<h4 align='center'>Category <%= @item.category %></h4>
-	<%= social_share_button_tag( @item.name, 'data-twitter-title' => 'Share on twitter') %>
+	<%= social_share_button_tag( "dummy") %>
 	<div align="center"><%= image_tag @item.photo_url(), :size => '280x280' if @item.photo? %></div>
 
 </div>
