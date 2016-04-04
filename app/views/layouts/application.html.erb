@@ -102,7 +102,11 @@
               
               <li class="pull-right" >
                 <a data-toggle="modal" data-target="#form" data-backdrop="static" data-keyboard="false" href="#">Sign Up</a>
-              </li>      
+              </li> 
+
+              <li class="pull-right">
+                <%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2) %>
+              </li>     
             <%end%>
           </ul>
         </div>
