@@ -9,7 +9,7 @@ class ItemsController < ApplicationController
 		@item = Item.new(item_params)
 		puts @item
 		if @item.save!
-   			redirect_to "/"
+   			redirect_to "/" , notice: "Item added successfully"
  		else 
  			render 'new'
  	    end

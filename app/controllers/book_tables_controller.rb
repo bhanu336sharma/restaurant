@@ -7,7 +7,7 @@ class BookTablesController < ApplicationController
 		@table = BookTable.create(table_params)		
 		UserMailer.confirm(@table).deliver	
 		if @table.save
-			redirect_to "/"
+			redirect_to "/" , notice: "Confirmation email has been sent"
 		else
 			render "/book_a_table"
 		end
@@ -30,7 +30,7 @@ class BookTablesController < ApplicationController
 	end	
 	
 	def index
-		redirect_to "/", notice: "Confirmation email has been sent"
+		redirect_to "/"
 	end
 
 	def table_params  

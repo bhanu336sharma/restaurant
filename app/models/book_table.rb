@@ -16,7 +16,7 @@ class BookTable < ActiveRecord::Base
 	def verify(entered_pin)
 		if self.pin == entered_pin
 	  		update(verified: true)
-	  		redirect_to "/", notice: "Confirmation email has been sent" 
+	  		redirect_to "/"
 	  	else
 	  		update(verified: false)
 	  	end
