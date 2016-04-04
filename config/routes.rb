@@ -9,6 +9,7 @@ Product::Application.routes.draw do
   resources :items
   resources :book_tables
 
+  get '/users/auth/google_oauth2/callback', to: 'sessions#omniauth_create'
   get '/about' => 'items#about'
   get '/contact' => 'items#contact'
   get '/index' => 'items#index'
