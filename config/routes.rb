@@ -1,5 +1,5 @@
 Product::Application.routes.draw do
-    devise_for :users, :controllers => {:registrations => "registrations"}, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+    devise_for :users, :controllers => {:registrations => "registrations", :omniauth_callbacks => "omniauth_callbacks" }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -8,8 +8,6 @@ Product::Application.routes.draw do
   root 'home#index'
   resources :items
   resources :book_tables
-
-  get '/users/auth/google_oauth2/callback', to: 'sessions#omniauth_create'
   get '/about' => 'items#about'
   get '/contact' => 'items#contact'
   get '/index' => 'items#index'
