@@ -9,7 +9,8 @@ Product::Application.routes.draw do
   resources :items
   resources :book_tables
 
-  get|post /users/auth/:action/callback, :to => 'sessions#create'
+  get /users/auth/:action/callback, :to => 'sessions#create'
+  post /users/auth/:action/callback, :to => 'sessions#create'
   get '/about' => 'items#about'
   get '/contact' => 'items#contact'
   get '/index' => 'items#index'
