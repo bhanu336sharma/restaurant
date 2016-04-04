@@ -315,7 +315,6 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   mini_magick
-  omniauth
   omniauth-google-oauth2
   pg
   pry
