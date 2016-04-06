@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
 	before_action :show, only: ['update', 'add_to_cart', 'destroy']
+	autocomplete :item, :name, :full => true
 
 	def new
 		@item = Item.new 
@@ -16,6 +17,7 @@ class ItemsController < ApplicationController
 	end
 
 	def index
+		@item = Item.new
 		@food = Item.all 
 	end
 

@@ -23,6 +23,8 @@ gem 'rails_db_info'
 gem 'twilio-ruby','~> 4.1.0'
 gem 'social-share-button'
 gem 'omniauth-google-oauth2'
+gem 'rails4-autocomplete'
+gem 'jquery-ui-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'

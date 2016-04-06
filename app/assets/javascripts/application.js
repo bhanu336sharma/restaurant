@@ -12,6 +12,8 @@
 //
 //= require jquery-1.10.2
 //= require jquery_ujs
+//= require jquery-ui
+//= require autocomplete-rails
 //= require social-share-button
 
 //= require_tree .
