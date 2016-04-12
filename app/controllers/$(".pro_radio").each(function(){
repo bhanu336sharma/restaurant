@@ -1,6 +1,0 @@
-$(".pro_radio").each(function(){  
-	if($(this).is(":checked") ){
-		console.log($(this))
-	}
-
-})
