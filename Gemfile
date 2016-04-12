@@ -25,7 +25,7 @@ gem 'social-share-button'
 gem 'omniauth-google-oauth2'
 gem 'rails4-autocomplete'
 gem 'jquery-ui-rails'
-gem 'linkedin-oauth2', '~> 1.0'
+gem 'linkedin-oauth2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
