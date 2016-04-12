@@ -190,6 +190,10 @@ GEM
     json (1.8.3)
     jwt (1.5.4)
     libv8 (3.16.14.13)
+    linkedin-oauth2 (1.0.0)
+      faraday (~> 0.9)
+      hashie (~> 3.2)
+      oauth2 (~> 1.0)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
@@ -319,6 +323,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   jquery-ui-rails
+  linkedin-oauth2 (~> 1.0)
   mini_magick
   omniauth-google-oauth2
   pg
