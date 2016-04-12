@@ -1,48 +1,47 @@
-<div class="container"  >
+<div class="container" >
     <h1  align="center">ITEMS</h1><br/>
-    <form>
+    <div id = "div1">
         <div align="center">
             <%= autocomplete_field_tag :search, params[:search], autocomplete_item_name_items_path, {class: "search-query", placeholder: "search item", type: "search"}%> 
-            <!-- <button class="submit" value="Search" name="commit" controller="items" action="search">Search</button> -->
-         </div>
-    </form>
-    <br/>
-    <table class="table table-hover table-bordered table-condensed ">   
-    <tr style="height: 50px">
-        <th>NAME</th>
-        <th>PRICE</th>
-    </tr>
-    <% @food.each do |obj| %>
-        <tr>
-            <td><%=obj.name%></td>
-            <td><%=obj.price%></td>
-            <td><%= link_to 'Show', "/items/#{obj.id}" %></td>
-            <td><%= link_to 'EDIT', "/items/#{obj.id}/edit" %></td>
-            <td><%= link_to 'DELETE', "/items/#{obj.id}",  method: :delete , :confirm => "Are you sure you want to delete this item?"  %></td>
+        </div>
+        <br/>
+        <table class="table table-hover table-bordered table-condensed ">   
+        <tr style="height: 50px">
+            <th>NAME</th>
+            <th>PRICE</th>
         </tr>
-    <%end%>
-    </table>
-    <h3 align="center"><%=link_to "Add new food item", "/items/new" %> </h3>       
+        <% @food.each do |obj| %>
+            <tr>
+                <td><%=obj.name%></td>
+                <td><%=obj.price%></td>
+                <td><%= link_to 'Show', "/items/#{obj.id}" %></td>
+                <td><%= link_to 'EDIT', "/items/#{obj.id}/edit" %></td>
+                <td><%= link_to 'DELETE', "/items/#{obj.id}",  method: :delete , :confirm => "Are you sure you want to delete this item?"  %></td>
+            </tr>
+        <%end%>
+        </table>
+        <h3 align="center"><%=link_to "Add new food item", "/items/new" %> </h3>      
+    </div> 
 </div>
-<div id="details"></div>
+<div align="center" id="details"></div>
 
 <script type="text/javascript">
     $( document ).ready(function() {
         $('#search').bind('railsAutocomplete.select', function(event, data){
-            alert(data.item.id);
-            $("#details").html(data.item.id);
-            window.location.href = "/items/"+data.item.id; 
-            // $.ajax({     
-            //     url: "/items/"+data.item.id,
-            //     success: function(){
-            //        console.log("success")
-            //         alert('success')
-                   
-            //     },
-            //     error:function(){
-            //         alert('error')
-            //     } 
-            // })              
+            // $("#details").html(data.item.id);
+            // window.location.href = "/items/"+data.item.id; 
+            $.ajax({     
+                url: "/items/"+data.item.id+'/search',
+                success: function(res){
+                    console.log(res)
+                    $("#div1").html("")
+                    $('#details').html("").append("<h3>"+res.data.name+"<br/><br/> Rs. "+res.data.price+"<br/><br/>"+res.data.category+"<br/><br/></h3>")
+                  
+                },
+                error:function(){
+                    alert('error')
+                } 
+            })              
         });         
     });
 </script>

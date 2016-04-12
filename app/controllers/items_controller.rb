@@ -17,8 +17,12 @@ class ItemsController < ApplicationController
 	end
 
 	def index
-		@item = Item.new
 		@food = Item.all 
+	end
+
+	def search
+		@item = Item.find(params[:id])	
+		render :json => {data: @item }	
 	end
 
 	def show

@@ -14,7 +14,8 @@ Product::Application.routes.draw do
   get '/contact' => 'items#contact'
   get '/index' => 'items#index'
   get '/order' => 'items#order'
-  get '/items/:id/add' => 'items#add'  
+  get '/items/:id/add' => 'items#add' 
+  get '/items/:id/search' => 'items#search' 
 
   get 'book_a_table' => 'book_tables#new'
   post 'book_tables/verify' => "book_tables#verify"
