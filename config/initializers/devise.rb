@@ -15,11 +15,9 @@ Devise.setup do |config|
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
   config.omniauth :google_oauth2, "569087001581-jal0k9p6oboe1tr8heaf0bmfgq3q2kvk.apps.googleusercontent.com", "sw2npvtc5fb-NGQkylv4U8rB", { access_type: "offline", approval_prompt: "" }
 
-  LinkedIn.configure do |config|
-    config.client_id     = "75jaxgu61c3yw2"
-    config.client_secret = "ljLuUBMwJ3tPPNyg"
-    config.redirect_uri  = "http://restaurant-product.herokuapp.com/"
-  end
+  config.omniauth :linkedin_oauth2, "75jaxgu61c3yw2", "ljLuUBMwJ3tPPNyg", { access_type: "offline", approval_prompt: "" }
+
+  
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
