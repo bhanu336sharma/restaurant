@@ -27,6 +27,7 @@ gem 'rails4-autocomplete'
 gem 'jquery-ui-rails'
 gem 'omniauth'
 gem 'omniauth-linkedin'
+gem 'linkedin'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
