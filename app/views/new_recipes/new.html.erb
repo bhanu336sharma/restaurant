@@ -1,0 +1,50 @@
+<style>
+  .width {
+     width: 100%; 
+     height: 180px;
+  }
+</style>
+<div align="center">
+  <img src="assets/table.jpg" class="width">
+</div>
+<h2 align="center"> YOUR RECIPE</h2>
+
+<div class="container-fluid form-horizontal col-sm-offset-4">
+  <%= form_for @recipe do |f| %>
+    <div class="form-group field ">
+      <div class="col-sm-2 control-label"><%= f.label :title %><br /></div>
+      <div class="col-sm-4"><%= f.text_field :title , :size => "25", :placeholder => "Title" %></div>
+    </div>
+    <div class="form-group field">
+      <div class="col-sm-2 control-label"><%= f.label :description  %><br /></div>
+      <div class="col-sm-4"><%= f.text_area :description, :cols => "23", :placeholder => "Your recipe"  %></div>
+    </div>    
+    <br/><br/> 
+    <%= f.submit "Submit", :class =>"btn btn-primary col-sm-2 col-sm-offset-2", :id =>'send-pin-link' %> 
+  <% end %>
+
+  <br/><br/>
+</div>
+<script>
+$(document).ready(function() {
+    $('#new_new_recipe').formValidation({
+        framework: 'bootstrap',
+        fields: {
+          "new_recipe[title]": {
+              validators: {
+                  notEmpty: {
+                      message: 'Mandatory Field'
+                  }  
+              }
+          },
+          "new_recipe[description]": {
+              validators: {
+                  notEmpty: {
+                    message: 'Mandatory Field'
+                  }  
+              }
+          }
+        }
+    });
+})
+</script>

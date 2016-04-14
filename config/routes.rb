@@ -10,6 +10,7 @@ Product::Application.routes.draw do
   resources :items do
     get :autocomplete_item_name, :on => :collection
   end
+  resources :new_recipes
   resources :book_tables
   get '/about' => 'items#about'
   get '/contact' => 'items#contact'
